@@ -1,0 +1,103 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": true,
+          "browsers": "last 2 versions"
+        }
+      }
+    ],
+    "stage-1",
+    "react"
+  ],
+  "plugins": [
+    "styled-jsx/babel"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "minify-replace",
+          {
+            "replacements": [
+              {
+                "identifierName": "__ENV__",
+                "replacement": {
+                  "type": "stringLiteral",
+                  "value": "test"
+                }
+              },
+              {
+                "identifierName": "__DEV__",
+                "replacement": {
+                  "type": "booleanLiteral",
+                  "value": true
+                }
+              }
+            ]
+          }
+        ],
+        [
+          "minify-dead-code-elimination",
+          {
+            "keepFnName": true,
+            "keepFnArgs": true
+          }
+        ],
+        "minify-guarded-expressions"
+      ]
+    },
+    "development": {
+      "plugins": [
+        [
+          "minify-replace",
+          {
+            "replacements": [
+              {
+                "identifierName": "__ENV__",
+                "replacement": {
+                  "type": "stringLiteral",
+                  "value": "development"
+                }
+              },
+              {
+                "identifierName": "__DEV__",
+                "replacement": {
+                  "type": "booleanLiteral",
+                  "value": true
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "minify-replace",
+          {
+            "replacements": [
+              {
+                "identifierName": "__ENV__",
+                "replacement": {
+                  "type": "stringLiteral",
+                  "value": "production"
+                }
+              },
+              {
+                "identifierName": "__DEV__",
+                "replacement": {
+                  "type": "booleanLiteral",
+                  "value": false
+                }
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}

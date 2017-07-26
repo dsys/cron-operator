@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cron-operator
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+spec:
+  replicas: {{ .Values.web.replicas }}
+  template:
+    metadata:
+      labels:
+        app: cron-operator
+        role: web
+    spec:
+      containers:
+      - name: cron-operator
+        image: "{{ .Values.web.image.repository }}:{{ .Values.web.image.tag }}"
+        imagePullPolicy: {{ .Values.web.image.pullPolicy }}
+        ports:
+        - containerPort: 80
+        env:
+        - name: WEB
+          value: "true"
+        - name: SCHEDULER
+          value: "false"
+        resources: {{ toJson .Values.web.resources }}
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80

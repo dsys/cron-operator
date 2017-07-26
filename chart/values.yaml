@@ -1,0 +1,32 @@
+web:
+  replicas: 1
+  image:
+    repository: pavlov/cron-operator
+    tag: latest
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    externalPort: 80
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+scheduler:
+  replicas: 1
+  image:
+    repository: pavlov/cron-operator
+    tag: latest
+    pullPolicy: Always
+  service:
+    type: ClusterIP
+    externalPort: 80
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi

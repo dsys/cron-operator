@@ -1,0 +1,18 @@
+apiVersion: pavlov.ai/v1
+kind: CronJob
+metadata:
+  name: test
+spec:
+  schedule: "* * * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          containers:
+          - name: test
+            image: busybox:latest
+            imagePullPolicy: IfNotPresent
+            args:
+            - sleep
+            - "5"

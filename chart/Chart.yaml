@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Jobs management interface
+name: jobs
+version: 1.0.0

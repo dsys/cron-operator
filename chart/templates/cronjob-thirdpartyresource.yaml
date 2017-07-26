@@ -1,0 +1,7 @@
+apiVersion: extensions/v1beta1
+kind: ThirdPartyResource
+metadata:
+  name: cron-job.pavlov.ai
+description: "A specification of a Job to run on a cron style schedule"
+versions:
+- name: v1

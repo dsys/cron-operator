@@ -1,0 +1,27 @@
+{
+  "name": "@pavlov/cron-operator",
+  "version": "1.0.0",
+  "description": "A job management interface",
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/pavlovai/cron-operator",
+  "dependencies": {
+    "@blueprintjs/core": "^1.23.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-minify-replace": "^0.1.2",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "html-webpack-plugin": "^2.29.0",
+    "moment": "^2.18.1",
+    "react": "^15.6.1",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-dom": "^15.6.1",
+    "react-select": "^1.0.0-rc.5",
+    "styled-jsx": "^1.0.9",
+    "webpack": "^3.3.0"
+  }
+}

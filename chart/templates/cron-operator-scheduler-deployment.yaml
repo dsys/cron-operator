@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cron-operator-scheduler
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+spec:
+  replicas: {{ .Values.scheduler.replicas }}
+  template:
+    metadata:
+      labels:
+        app: cron-operator
+        role: scheduler
+    spec:
+      containers:
+      - name: cron-operator-scheduler
+        image: "{{ .Values.scheduler.image.repository }}:{{ .Values.scheduler.image.tag }}"
+        imagePullPolicy: {{ .Values.scheduler.image.pullPolicy }}
+        - name: WEB
+          value: "true"
+        - name: SCHEDULER
+          value: "false"
+        resources: {{ toJson .Values.scheduler.resources }}
