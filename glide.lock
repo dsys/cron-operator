@@ -1,0 +1,12 @@
+hash: 021a1d8da4ec265f824bb44d4609463ad3c0a41e1172c71f7766b83d9e3a85f3
+updated: 2017-07-26T10:42:55.969438781-07:00
+imports:
+- name: github.com/robfig/cron
+  version: b024fc5ea0e34bc3f83d9941c8d60b0622bfaca4
+- name: github.com/sirupsen/logrus
+  version: a3f95b5c423586578a4e099b11a46c2479628cac
+- name: golang.org/x/sys
+  version: 8f0908ab3b2457e2e15403d3697c9ef5cb4b57a9
+  subpackages:
+  - unix
+testImports: []
