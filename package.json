@@ -1,11 +1,11 @@
 {
-  "name": "@pavlov/cron-operator",
+  "name": "@kubeheads/cron-operator",
   "version": "1.0.0",
-  "description": "A job management interface",
+  "description": "Kubernetes-native Job management UI and cron scheduler",
   "license": "UNLICENSED",
   "main": "index.js",
   "private": true,
-  "repository": "https://github.com/pavlovai/cron-operator",
+  "repository": "https://github.com/kubeheads/cron-operator",
   "dependencies": {
     "@blueprintjs/core": "^1.23.1",
     "babel-core": "^6.25.0",

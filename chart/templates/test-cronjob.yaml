@@ -1,4 +1,4 @@
-apiVersion: pavlov.ai/v1
+apiVersion: kubeheads.pavlov.ai/v1
 kind: CronJob
 metadata:
   name: test

@@ -17,7 +17,7 @@ import (
 
 const kubeCertsPath = "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
 const kubeTokenPath = "/var/run/secrets/kubernetes.io/serviceaccount/token"
-const listCronJobsPath = "/apis/pavlov.ai/v1/cronjobs"
+const listCronJobsPath = "/apis/kubeheads.pavlov.ai/v1/cronjobs"
 const createJobPath = "/apis/batch/v1/namespaces/{{.Metadata.Namespace}}/jobs"
 
 var (

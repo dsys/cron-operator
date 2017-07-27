@@ -1,5 +1,5 @@
-const JOBS_LIST_URL = '/k8s-api/apis/batch/v1/jobs';
-const CRON_JOBS_LIST_URL = '/k8s-api/apis/pavlov.ai/v1/cronjobs';
+const JOBS_LIST_URL = "/k8s-api/apis/batch/v1/jobs";
+const CRON_JOBS_LIST_URL = "/k8s-api/apis/kubeheads.pavlov.ai/v1/cronjobs";
 
 export async function fetchJobs() {
   const res = await fetch(JOBS_LIST_URL);

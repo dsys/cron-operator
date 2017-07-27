@@ -15,4 +15,4 @@
 
 ## License
 
-[BSD 3-Clause](https://github.com/pavlovai/cron-operator/blob/master/LICENSE)
+[BSD 3-Clause](https://github.com/kubeheads/cron-operator/blob/master/LICENSE)
