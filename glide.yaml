@@ -1,6 +1,26 @@
-package: github.com/pavlovai/cron-operator
+package: github.com/kubeheads/cron-operator
 import:
 - package: github.com/robfig/cron
-  version: ~1.0.0
+  version: be2e0b0deed5a68ffee390b4583a13aff8321535
 - package: github.com/sirupsen/logrus
   version: ~1.0.2
+- package: k8s.io/apiextensions-apiserver
+  version: c682349b0d1c12975d8e24a9799b66747255d7a5
+  subpackages:
+  - pkg/apis/apiextensions/v1beta1
+- package: k8s.io/apimachinery
+  version: 6134cb2da6d90597b0434e349f90f94fafc9ae51
+  subpackages:
+  - pkg/apis/meta/v1
+  - pkg/apis/meta/v1/unstructured
+  - pkg/runtime
+  - pkg/runtime/schema
+  - pkg/runtime/serializer
+  - pkg/watch
+- package: k8s.io/client-go
+  version: 7c69e980210777a6292351ac6873de083526f08e
+  subpackages:
+  - dynamic
+  - pkg/api
+  - pkg/api/v1
+  - rest
