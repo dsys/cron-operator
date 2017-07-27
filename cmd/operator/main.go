@@ -2,10 +2,11 @@ package main
 
 import (
 	"flag"
-	"github.com/sirupsen/logrus"
 	"os"
 	"os/signal"
 	"syscall"
+
+	"github.com/sirupsen/logrus"
 )
 
 var (

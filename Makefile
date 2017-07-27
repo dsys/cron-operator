@@ -13,6 +13,12 @@ build: clean
 	@ ./node_modules/.bin/webpack -p --output-path build/www
 	@ docker build -t pavlov/cron-operator:$(TAG) .
 
+# Update dependencies
+.PHONY: vendor
+vendor: glide.yaml
+	glide up --strip-vendor
+	glide-vc --use-lock-file --no-tests --only-code
+
 .PHONY: push
 push: TAG ?= latest
 push:
