@@ -6,13 +6,14 @@ import (
 	"crypto/x509"
 	"encoding/json"
 	"fmt"
-	"github.com/robfig/cron"
-	"github.com/sirupsen/logrus"
 	"io"
 	"io/ioutil"
 	"net/http"
 	"text/template"
 	"time"
+
+	"github.com/robfig/cron"
+	"github.com/sirupsen/logrus"
 )
 
 const kubeCertsPath = "/var/run/secrets/kubernetes.io/serviceaccount/ca.crt"
